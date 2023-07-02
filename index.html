@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Percentage Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    input[type="number"] {
+      width: 150px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Percentage Calculator</h1>
+  <p>Enter a value and a percentage to increase or decrease it:</p>
+
+  <input type="number" id="valueInput" placeholder="Enter a value" step="any">
+  <input type="number" id="percentageInput" placeholder="Enter a percentage" step="any">
+  <br><br>
+  <input type="submit" value="Increase" onclick="increaseValue()">
+  <input type="submit" value="Decrease" onclick="decreaseValue()">
+  
+  <p id="result"></p>
+
+  <script>
+    function increaseValue() {
+      var value = parseFloat(document.getElementById("valueInput").value);
+      var percentage = parseFloat(document.getElementById("percentageInput").value);
+      var increasedValue = value * (1 + percentage / 100);
+      document.getElementById("result").textContent = "Increased value: " + increasedValue.toFixed(2);
+    }
+
+    function decreaseValue() {
+      var value = parseFloat(document.getElementById("valueInput").value);
+      var percentage = parseFloat(document.getElementById("percentageInput").value);
+      var decreasedValue = value * (1 - percentage / 100);
+      document.getElementById("result").textContent = "Decreased value: " + decreasedValue.toFixed(2);
+    }
+  </script>
+</body>
+</html>
