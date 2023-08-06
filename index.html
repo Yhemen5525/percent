@@ -43,14 +43,14 @@
       var value = parseFloat(document.getElementById("valueInput").value);
       var percentage = parseFloat(document.getElementById("percentageInput").value);
       var increasedValue = value * (1 + percentage / 100);
-      document.getElementById("result").textContent = "Increased value: " + increasedValue.toFixed(2);
+      document.getElementById("result").textContent = "Increased value: " + increasedValue
     }
 
     function decreaseValue() {
       var value = parseFloat(document.getElementById("valueInput").value);
       var percentage = parseFloat(document.getElementById("percentageInput").value);
       var decreasedValue = value * (1 - percentage / 100);
-      document.getElementById("result").textContent = "Decreased value: " + decreasedValue.toFixed(2);
+      document.getElementById("result").textContent = "Decreased value: " + decreasedValue
     }
   </script>
 </body>
